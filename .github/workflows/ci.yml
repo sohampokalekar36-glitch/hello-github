@@ -1,0 +1,15 @@
+name: Feature Branch CI
+
+on:
+  push:
+    branches:
+      - feature-ci
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print message
+        run: echo "Running CI from feature branch!"
